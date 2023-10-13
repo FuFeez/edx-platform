@@ -111,9 +111,6 @@ urlpatterns = [
 
     path('i18n/', include('django.conf.urls.i18n')),
 
-     # Course access group API
-    path('course_access_groups/api/v1/', include('openedx.features.course_access_groups.urls')),
-
     # Enrollment API RESTful endpoints
     path('api/enrollment/v1/', include('openedx.core.djangoapps.enrollments.urls')),
 
@@ -1051,4 +1048,10 @@ urlpatterns += [
 # MFE API urls
 urlpatterns += [
     path('api/mfe_config/v1', include(('lms.djangoapps.mfe_config_api.urls', 'lms.djangoapps.mfe_config_api'), namespace='mfe_config_api'))
+]
+
+
+# Course access group API
+urlpatterns += [
+    path('course_access_groups/api/v1/', include('openedx.features.course_access_groups.urls')),
 ]
