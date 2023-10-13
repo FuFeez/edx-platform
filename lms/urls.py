@@ -112,7 +112,7 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
 
      # Course access group API
-    path('course_access_groups/api/v1/', include('openedx.core.djangoapps.course_access_groups.urls')),
+    path('course_access_groups/api/v1/', include('openedx.features.course_access_groups.urls')),
 
     # Enrollment API RESTful endpoints
     path('api/enrollment/v1/', include('openedx.core.djangoapps.enrollments.urls')),
